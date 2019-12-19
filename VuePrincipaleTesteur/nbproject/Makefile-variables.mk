@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=VuePrincapleTesteur
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/VuePrincapleTesteur
+CND_ARTIFACT_NAME_Debug=VuePrincipaleTesteur
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/VuePrincipaleTesteur
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=VuePrincapleTesteur.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/VuePrincapleTesteur.tar
+CND_PACKAGE_NAME_Debug=VuePrincipaleTesteur.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/VuePrincipaleTesteur.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=VuePrincapleTesteur
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/VuePrincapleTesteur
+CND_ARTIFACT_NAME_Release=VuePrincipaleTesteur
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/VuePrincipaleTesteur
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=VuePrincapleTesteur.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/VuePrincapleTesteur.tar
+CND_PACKAGE_NAME_Release=VuePrincipaleTesteur.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/VuePrincipaleTesteur.tar
 #
 # include compiler specific variables
 #
