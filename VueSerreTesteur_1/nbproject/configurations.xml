@@ -4,7 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>InfoClimat/InfoClimat.h</itemPath>
+      <itemPath>../classeMetier/InfoClimat.h</itemPath>
+      <itemPath>../classeMetier/Observable.h</itemPath>
+      <itemPath>../classeMetier/Observateur.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,7 +15,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>InfoClimat.cpp</itemPath>
+      <itemPath>../classeMetier/InfoClimat.cpp</itemPath>
+      <itemPath>../classeMetier/Observable.cpp</itemPath>
+      <itemPath>../classeMetier/Observateur.cpp</itemPath>
       <itemPath>VueSerre.ui</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -42,9 +46,17 @@
       </qt>
       <compileType>
       </compileType>
-      <item path="InfoClimat.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../classeMetier/InfoClimat.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="InfoClimat/InfoClimat.h" ex="false" tool="3" flavor2="0">
+      <item path="../classeMetier/InfoClimat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observateur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observateur.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="VueSerre.ui" ex="false" tool="3" flavor2="0">
       </item>
@@ -75,9 +87,17 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="InfoClimat.cpp" ex="false" tool="1" flavor2="0">
+      <item path="../classeMetier/InfoClimat.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="InfoClimat/InfoClimat.h" ex="false" tool="3" flavor2="0">
+      <item path="../classeMetier/InfoClimat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observateur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="../classeMetier/Observateur.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="VueSerre.ui" ex="false" tool="3" flavor2="0">
       </item>
