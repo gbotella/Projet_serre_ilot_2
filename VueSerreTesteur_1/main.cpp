@@ -12,6 +12,7 @@
  */
 
 #include <QApplication>
+#include <InfoClimat.h>
 
 int main(int argc, char *argv[]) {
     // initialize resources, if needed
