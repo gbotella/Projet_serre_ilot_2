@@ -16,23 +16,37 @@
 InfoClimat::InfoClimat() {
 }
 
-InfoClimat::InfoClimat(const InfoClimat& orig) {
-}
-
 InfoClimat::~InfoClimat() {
 }
 
-int InfoClimat::hydrometrie() {
+int InfoClimat::getHydrometrie() {
+    return hydrometrie;
 }
 
-int InfoClimat::temperature() {
+int InfoClimat::getLuminosite() {
+    return luminosite;
 }
 
-int InfoClimat::positionOuvrant() {
+int InfoClimat::getPositionOuvrant() {
+    return positionOuvrant;
 }
 
-int InfoClimat::luminosite() {
+int InfoClimat::getTemperature() {
+    return temperature;
 }
 
-int InfoClimat::date() {
+void InfoClimat::setHydrometrie(int val) {
+
+}
+
+void InfoClimat::setLuminosite(int val) {
+
+}
+
+void InfoClimat::setPositionOuvrant(int val) {
+
+}
+
+void InfoClimat::setTemperature(int val) {
+
 }

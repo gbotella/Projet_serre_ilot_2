@@ -14,17 +14,26 @@
 #ifndef INFOCLIMAT_H
 #define INFOCLIMAT_H
 
-class InfoClimat {
+#include "Observable.h"
+
+class InfoClimat : public Observable {
 public:
     InfoClimat();
-    InfoClimat(const InfoClimat& orig);
     virtual ~InfoClimat();
+    int getHydrometrie();
+    int getTemperature();
+    int getPositionOuvrant();
+    int getLuminosite();
+    void setHydrometrie(int val);
+    void setTemperature(int val);
+    void setPositionOuvrant(int val);
+    void setLuminosite(int val);
 private:
-    int hydrometrie();
-    int temperature();
-    int positionOuvrant();
-    int luminosite();
-    int date();
+    int hydrometrie;
+    int temperature;
+    int positionOuvrant;
+    int luminosite;
+    int date;
 };
 
 #endif /* INFOCLIMAT_H */

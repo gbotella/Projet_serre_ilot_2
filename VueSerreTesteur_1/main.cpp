@@ -12,15 +12,17 @@
  */
 
 #include <QApplication>
-#include <InfoClimat.h>
+#include <QWidget>
+#include "VueSerre.h"
 
 int main(int argc, char *argv[]) {
-    // initialize resources, if needed
-    // Q_INIT_RESOURCE(resfile);
-
+   
     QApplication app(argc, argv);
-
-    // create and show your widgets here
-
+    
+    VueSerre *maVue = new VueSerre();
+    
+    maVue->show();
+    maVue->mettreAJour();
+    
     return app.exec();
 }
