@@ -12,11 +12,15 @@
  */
 
 #include "VuePrincipale.h"
-#include "VueMeteo.h"
+#include "../VueMeteoTesteur/VueMeteo.h"
+#include "../VueSerreTesteur_1/VueSerre.h"
 VuePrincipale::VuePrincipale() {
     widget.setupUi(this);
     MaMeteo = new VueMeteo();
+    MaSerre = new VueSerre();
     widget.meteo->addWidget(MaMeteo);
+   
+    widget.serre ->addWidget(MaSerre);
 }
 
 VuePrincipale::~VuePrincipale() {
