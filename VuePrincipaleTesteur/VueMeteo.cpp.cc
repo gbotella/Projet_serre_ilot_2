@@ -5,19 +5,18 @@
  */
 
 /*
- * File:   VuePrincipale.cpp
+ * File:   VueMeteo.cpp
  * Author: snir2g1
  *
- * Created on 16 janvier 2020, 17:10
+ * Created on 16 janvier 2020, 17:15
  */
 
-#include "VuePrincipale.h"
 #include "VueMeteo.h"
-VuePrincipale::VuePrincipale() {
+
+VueMeteo::VueMeteo() {
     widget.setupUi(this);
-    MaMeteo = new VueMeteo();
-    widget.meteo->addWidget(MaMeteo);
+    
 }
 
-VuePrincipale::~VuePrincipale() {
+VueMeteo::~VueMeteo() {
 }

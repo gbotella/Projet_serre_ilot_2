@@ -48,10 +48,14 @@ OBJECTS_DIR   = build/Debug/GNU-Linux/
 
 ####### Files
 
-SOURCES       = VuePrincipale.cpp.cc \
-		main.cpp moc_VuePrincipale.cpp
-OBJECTS       = build/Debug/GNU-Linux/VuePrincipale.cpp.o \
+SOURCES       = VueMeteo.cpp.cc \
+		VuePrincipale.cpp.cc \
+		main.cpp moc_VueMeteo.cpp \
+		moc_VuePrincipale.cpp
+OBJECTS       = build/Debug/GNU-Linux/VueMeteo.cpp.o \
+		build/Debug/GNU-Linux/VuePrincipale.cpp.o \
 		build/Debug/GNU-Linux/main.o \
+		build/Debug/GNU-Linux/moc_VueMeteo.o \
 		build/Debug/GNU-Linux/moc_VuePrincipale.o
 DIST          = /opt/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/common/unix.conf \
@@ -201,7 +205,9 @@ DIST          = /opt/Qt/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/exceptions.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/yacc.prf \
 		/opt/Qt/5.7/gcc_64/mkspecs/features/lex.prf \
-		nbproject/nbproject/qt-Debug.pro VuePrincipale.h VuePrincipale.cpp.cc \
+		nbproject/nbproject/qt-Debug.pro VueMeteo.h \
+		VuePrincipale.h VueMeteo.cpp.cc \
+		VuePrincipale.cpp.cc \
 		main.cpp
 QMAKE_TARGET  = VuePrincipaleTesteur
 DESTDIR       = dist/Debug/GNU-Linux/
@@ -211,7 +217,7 @@ TARGET        = dist/Debug/GNU-Linux/VuePrincipaleTesteur
 first: all
 ####### Build rules
 
-$(TARGET): ui_VuePrincipale.h $(OBJECTS)  
+$(TARGET): ui_VueMeteo.h ui_VuePrincipale.h $(OBJECTS)  
 	@test -d dist/Debug/GNU-Linux/ || mkdir -p dist/Debug/GNU-Linux/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -534,9 +540,9 @@ dist: distdir FORCE
 distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
-	$(COPY_FILE) --parents VuePrincipale.h $(DISTDIR)/
-	$(COPY_FILE) --parents VuePrincipale.cpp.cc main.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents VuePrincipale.ui $(DISTDIR)/
+	$(COPY_FILE) --parents VueMeteo.h VuePrincipale.h $(DISTDIR)/
+	$(COPY_FILE) --parents VueMeteo.cpp.cc VuePrincipale.cpp.cc main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents VueMeteo.ui VuePrincipale.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -562,9 +568,14 @@ benchmark: first
 
 compiler_rcc_make_all:
 compiler_rcc_clean:
-compiler_moc_header_make_all: moc_VuePrincipale.cpp
+compiler_moc_header_make_all: moc_VueMeteo.cpp moc_VuePrincipale.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_VuePrincipale.cpp
+	-$(DEL_FILE) moc_VueMeteo.cpp moc_VuePrincipale.cpp
+moc_VueMeteo.cpp: ui_VueMeteo.h \
+		VueMeteo.h \
+		/opt/Qt/5.7/gcc_64/bin/moc
+	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/Bureau/TP/Commenge/TP06/Projet_serre_ilot_2/VuePrincipaleTesteur/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VueMeteo.h -o moc_VueMeteo.cpp
+
 moc_VuePrincipale.cpp: ui_VuePrincipale.h \
 		/opt/Qt/5.7/gcc_64/include/QtCore/QVariant \
 		/opt/Qt/5.7/gcc_64/include/QtCore/qvariant.h \
@@ -702,15 +713,21 @@ moc_VuePrincipale.cpp: ui_VuePrincipale.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		VueMeteo.h \
+		ui_VueMeteo.h \
 		VuePrincipale.h \
 		/opt/Qt/5.7/gcc_64/bin/moc
 	/opt/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/snir2g1/Bureau/TP/Commenge/TP06/Projet_serre_ilot_2/VuePrincipaleTesteur/nbproject -I/opt/Qt/5.7/gcc_64/include -I/opt/Qt/5.7/gcc_64/include/QtWidgets -I/opt/Qt/5.7/gcc_64/include/QtGui -I/opt/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/6.1.1 -I/usr/include/c++/6.1.1/x86_64-redhat-linux -I/usr/include/c++/6.1.1/backward -I/usr/lib/gcc/x86_64-redhat-linux/6.1.1/include -I/usr/local/include -I/usr/include VuePrincipale.h -o moc_VuePrincipale.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_VuePrincipale.h
+compiler_uic_make_all: ui_VueMeteo.h ui_VuePrincipale.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_VuePrincipale.h
+	-$(DEL_FILE) ui_VueMeteo.h ui_VuePrincipale.h
+ui_VueMeteo.h: VueMeteo.ui \
+		/opt/Qt/5.7/gcc_64/bin/uic
+	/opt/Qt/5.7/gcc_64/bin/uic VueMeteo.ui -o ui_VueMeteo.h
+
 ui_VuePrincipale.h: VuePrincipale.ui \
 		/opt/Qt/5.7/gcc_64/bin/uic
 	/opt/Qt/5.7/gcc_64/bin/uic VuePrincipale.ui -o ui_VuePrincipale.h
@@ -724,6 +741,10 @@ compiler_lex_clean:
 compiler_clean: compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
+
+build/Debug/GNU-Linux/VueMeteo.cpp.o: VueMeteo.cpp.cc VueMeteo.h \
+		ui_VueMeteo.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/VueMeteo.cpp.o VueMeteo.cpp.cc
 
 build/Debug/GNU-Linux/VuePrincipale.cpp.o: VuePrincipale.cpp.cc VuePrincipale.h \
 		ui_VuePrincipale.h \
@@ -862,7 +883,9 @@ build/Debug/GNU-Linux/VuePrincipale.cpp.o: VuePrincipale.cpp.cc VuePrincipale.h 
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget
+		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		VueMeteo.h \
+		ui_VueMeteo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/VuePrincipale.cpp.o VuePrincipale.cpp.cc
 
 build/Debug/GNU-Linux/main.o: main.cpp /opt/Qt/5.7/gcc_64/include/QtWidgets/QApplication \
@@ -1002,8 +1025,13 @@ build/Debug/GNU-Linux/main.o: main.cpp /opt/Qt/5.7/gcc_64/include/QtWidgets/QApp
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget
+		/opt/Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		VueMeteo.h \
+		ui_VueMeteo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/main.o main.cpp
+
+build/Debug/GNU-Linux/moc_VueMeteo.o: moc_VueMeteo.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/moc_VueMeteo.o moc_VueMeteo.cpp
 
 build/Debug/GNU-Linux/moc_VuePrincipale.o: moc_VuePrincipale.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/GNU-Linux/moc_VuePrincipale.o moc_VuePrincipale.cpp

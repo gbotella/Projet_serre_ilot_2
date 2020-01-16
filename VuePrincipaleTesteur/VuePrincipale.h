@@ -15,7 +15,7 @@
 #define _VUEPRINCIPALE_H
 
 #include "ui_VuePrincipale.h"
-
+#include "VueMeteo.h"
 class VuePrincipale : public QWidget {
     Q_OBJECT
 public:
@@ -23,6 +23,7 @@ public:
     virtual ~VuePrincipale();
 private:
     Ui::VuePrincipale widget;
+    VueMeteo* MaMeteo;
 };
 
 #endif /* _VUEPRINCIPALE_H */
