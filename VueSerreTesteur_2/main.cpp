@@ -12,6 +12,8 @@
  */
 
 #include <QApplication>
+#include <QWidget>
+#include "VueSerre.h"
 
 int main(int argc, char *argv[]) {
     // initialize resources, if needed
@@ -19,7 +21,10 @@ int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
 
-    // create and show your widgets here
+    VueSerre *maVueSerre = new VueSerre();
+    maVueSerre->show();
+    
+    maVueSerre->mettreAjour();
 
     return app.exec();
 }
