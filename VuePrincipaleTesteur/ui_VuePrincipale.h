@@ -48,7 +48,7 @@ public:
         serre->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(VuePrincipale);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(400, 20, 135, 15));
+        label->setGeometry(QRect(400, 20, 191, 16));
 
         retranslateUi(VuePrincipale);
 
