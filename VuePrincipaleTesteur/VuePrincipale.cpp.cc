@@ -12,8 +12,6 @@
  */
 
 #include "VuePrincipale.h"
-#include "../VueMeteoTesteur/VueMeteo.h"
-#include "../VueSerreTesteur_1/VueSerre.h"
 VuePrincipale::VuePrincipale() {
     widget.setupUi(this);
     MaMeteo = new VueMeteo();
